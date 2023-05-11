@@ -1,0 +1,25 @@
+<h2 class="flex">Statistics</h2>
+    <div class="stats ">
+        <div class="stats-p "><p>Location:{{add}}</p></div>
+        <div class="stats-p flex">
+              <label for="">Total Species: {{speclen}}</label>
+              <select name="id" id="wil">
+                <option value="All">All</option>
+                {% for id in species %}
+                <option value="{{id}}">{{id}}</option>
+                {% endfor %}
+              </select>
+              <label for="">Total Animals Images: {{urllen}}</label>
+              <input type="text" name="lat" id="lat" value="{{lat}}">
+              <input type="text" name="long" id="long" value="{{long}}">
+        </div>
+        <div class="flex">
+            <button id ="search" class="form-btn" onclick="search()">Search</button>
+        </div>     
+        
+    </div>
+    <div class="wild-image grid-two">
+        {% for url in urls %}
+        <div class="item"><img src="{{url}}"></div>
+        {% endfor %}
+</div>

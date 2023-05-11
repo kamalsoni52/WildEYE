@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type=text/css href="static/css/stylee.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>WILDEYE-Admin</title>
+</head>
+<body>
+    <header class="header flex">
+        <div id = "navv" class="nav">
+            <a href="/"><img src = "static/css/Images/logo.png" alt="logo" class="logo"></a>
+            <nav class="navbar">
+                <ul class="navbar-list flex">
+                    <li><a href="/" class = "navbar-link">Home</a></li>
+                    <li><a href="/map" class = "navbar-link">Explore</a></li>
+                    <li><a href="/NodesStatus" class = "navbar-link">Nodes</a></li>
+                    <li><a href="/admin" class = "navbar-link navbar-link-btn">ADMIN</a></li>
+                    <li><a href="/Subscribe" class = "navbar-link navbar-link-btn">Subscribe</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-mobile">
+                <ion-icon name="menu-outline" class="navbar-icon"></ion-icon>
+                <ion-icon name="close-circle-outline" class="navbar-icon"></ion-icon>
+            </div>
+        </div>
+        <section id="section4">
+                    <h1 class="center">Admin panel</h1>
+        </section> 
+        
+            
+    </header>
+    <section id="section1" class="container flex   flex-column">
+        <div class="admin-heading flex">
+            <h1>Gateway Deployment Section</h1>
+        </div>
+        <div class="main grid-two">
+            <div id="instruction" class="">
+                <h1 class="flex">Deploy the Gateway </h1>
+                <h2 class="flex">Instruction</h2>
+                <ul class="flex flex-column">
+                    <li><span>Type the DeviceID in Wil Input Field</span></li>
+                    <li><span>Click on Location button to get the live Latitude and longitude and full
+                            address</span></li>
+                    <li><span>Click on submit button to deploy the Device and get confirm alert</span></li>
+                </ul>
+            </div>
+            <div id="deployform" class="flex flex-column">
+                <div class="form">
+                    <label for="wildid">GatewayID</label>
+                    <input type="text" placeholder="WildeyeID" name="wildid" id="wildid" onkeyup="empty()">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" placeholder="latitude" name="latitude" id="latitude" onkeyup="empty()"
+                        disabled>
+                    <label for="longitude">Longitude</label>
+                    <input type="text" placeholder="longitude" name="longitude" id="longitude" onkeyup="empty()"
+                        disabled>
+                    <label for="address">Address</label>
+                    <textarea placeholder="Address" name="address" id="address" onkeyup="empty()" disabled></textarea>
+                    <div class=".btn flex">
+                        <button class="form-btn" id="locate" onclick="clicklocatee()" disabled>Location</button>
+                        <button class="form-btn" id="submit" onclick="sub()" disabled>Deploy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nodesection" class="container flex   flex-column">
+        <div class="admin-heading flex">
+            <h1>Node deploy section</h1>
+        </div>
+        <div class="main grid-two">
+            <div id="instruction">
+                <h1 class="flex">Deploy the Nodes here</h1>
+                <h2 class="flex">Instruction</h2>
+                <ul class="flex flex-column">
+                    <li><span>select the GatewayID from slection box</span></li>
+                    <li><span>type the Nodeid</span></li>
+                    <li><span>Click on deploy button to deploy node</span></li>
+                </ul>
+            </div>
+            <div id="nodeform" class="flex ">                   
+                      <div class="form">
+                            <label> Select GatewayID -</label>
+                            <select name="wili" id="wili">
+                                {% for id in ids %}
+                                <option value="{{id}}">{{id}}</option>
+                                {% endfor %}
+                              </select>
+                        <label for="nodes">Enter the NodeId</label>
+                        <Input type="text" placeholder="NodeID" name="node" id="nodes"></Input>               
+                        <button class="form-btn" id="deploynode" onclick="depNode()">Deploy</button>
+                      <div>
+                  </div>
+            </div>
+        </div>
+    </section>   
+    <section id="section2" class="container flex   flex-column">
+        <div class="admin-heading flex">
+            <h1>Images Upload Section</h1>
+        </div>
+        <div class="main grid-two">
+            <div id="instruction" class="">
+                <h1 class="flex">Upload the Images Here</h1>
+                <h2 class="flex">Instruction</h2>
+                <ul class="flex flex-column">
+                    <li><span>select the DeviceID from slection box</span></li>
+                    <li><span>Upload the images using Chooseing files option</span></li>
+                    <li><span>Type the species name</span></li>
+                    <li><span>Click on Upload button to upload images</span></li>
+                </ul>
+            </div>
+            <div id="uploadform" > 
+                <h1 class="flex">Upload the Images Here</h1>   
+                <div class="form">                 
+                      <form method="POST" action="/upload" enctype="multipart/form-data" class="flex flex-column">
+                            <label> Select Device Id here -</label>
+                            <select name="id" id="wil">
+                                {% for id in ids %}
+                                <option value="{{id}}">{{id}}</option>
+                                {% endfor %}
+                              </select>
+                        <label for="file">Select the files</label>
+                        <input type="file" name=file id="file" multiple accept=".jpg, .png, .jpeg"> 
+                        <label for="spec">Enter the Species name</label>
+                        <Input type="text" placeholder="Species Name" name="spec" id="spec"></Input>               
+                        <button class="form-btn" id="upload">Upload</button>
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="static/Adminscript.js"></script>
+    <script>
+        $(window).on('scroll',function (){
+        if($(window).scrollTop()){
+          $('#navv').addClass('navcolor')
+        }
+        else{
+          $('#navv').removeClass('navcolor')
+        }
+        });
+    </script>
+</body>
+</html>

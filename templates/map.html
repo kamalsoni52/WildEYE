@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="static/css/mapstyle.css">
+    <title>Wildeye-Explore</title>
+</head>
+<body> 
+    <header class="header flex flex-column">
+        <div class="nav">
+            <a href="/"><img src = "static/css/Images/logo.png" alt="logo" class="logo"></a>
+            <nav class="navbar">
+                <ul class="navbar-list flex">
+                    <li><a href="/" class = "navbar-link">Home</a></li>
+                    <li><a href="/map" class = "navbar-link">Explore</a></li>
+                    <li><a href="/NodesStatus" class = "navbar-link">Nodes</a></li>
+                    <li><a href="/admin" class = "navbar-link navbar-link-btn">ADMIN</a></li>
+                    <li><a href="/Subscribe" class = "navbar-link navbar-link-btn">Subscribe</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-mobile">
+                <ion-icon name="menu-outline" class="navbar-icon"></ion-icon>
+                <ion-icon name="close-circle-outline" class="navbar-icon"></ion-icon>
+            </div>
+        </div>
+        <section class="main">
+            <div id="image" class="flex flex-column">
+                <h2 class="flex">Statistics</h2>
+                <div class="stats flex">
+                    <p>Click on marker in map to get Statistics accoridng to location</p>
+                </div>
+                <div class="wild-image flex">
+                    <p>Image will be show after click on marker</p>
+                </div>
+            </div>
+            <div id="map">               
+            </div>            
+        </section>
+    </header>
+    <script>
+        var dat= JSON.parse('{{data|tojson}}'); 
+        console.log(dat)          
+    </script>
+    <script src="static/script.js"></script> 
+    <script src="https://code.jquery.com/jquery.js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7uzfaWZai38kaXHVxL8x9zK8s9o4ciTg&callback=initMap">    
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    
+}
+:root{
+    --primary-color: #436904;
+    --btn-color: #ECCA11;
+    --white: #EBEDCF;
+    --shadow: #0d1501;
+    --helper: #9DBE76;
+}
+body{
+    overflow-x: hidden;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+.header{
+    height: 100vh;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4.5rem;
+    background: rgb(86,89,103);
+    background: radial-gradient(circle, rgba(86,89,103,1) 17%, rgba(40,36,37,1) 87%);   
+}
+.navbar-list{
+    list-style-type: none;
+    gap: 2rem;
+}
+.nav .navbar-list .navbar-link:link, .nav .navbar-list .navbar-link:visited{
+    text-decoration: none;  
+    color: var(--white);
+    font-size: 1.5rem; 
+}
+.nav .navbar-list .navbar-link:hover{
+    color: var(--helper);
+}
+.nav .navbar-list .navbar-link-btn:link, .nav .navbar-list .navbar-link-btn:visited{
+    padding: 1.2rem 1.9rem;    
+    background-color: var(--btn-color);
+    color: var(--shadow);
+    border-radius: 20rem;    
+}
+.nav .navbar-list .navbar-link-btn:hover, .nav .navbar-list .navbar-link-btn:active{
+    transition: all 200ms linear;
+    background: rgb(74,156,53);
+    background: radial-gradient(circle, rgba(74,156,53,1) 20%, rgba(53,113,38,1) 97%);
+    color: var(--white);
+}
+.logo{
+    width: 23.2rem;
+    height:8rem;
+}
+.navbar-mobile {
+    display: none;
+    font-size: 3.1rem;
+}
+.navbar-icon[name="close-circle-outline"]{
+    display: none;
+}
+
+.form-btn{
+    padding: 1rem 1.5rem; 
+    font-size: 1.5rem;   
+    background-color: var(--btn-color);
+    color: var(--shadow);
+    border-radius: 20rem;
+    border: 1px solid var(--btn-color);
+    display: inline-block;
+}
+.form-btn:hover{
+    transition: all 200ms linear;
+    background: rgb(74,156,53);
+    background: radial-gradient(circle, rgba(74,156,53,1) 20%, rgba(53,113,38,1) 97%);
+    color: var(--white);
+    border: 1px solid rgb(33,89,47);
+    cursor: pointer;
+}
+#wid{
+    display: none;
+}
+.main{
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 1fr 10fr;
+    
+}
+.main  h1{
+    font-size: 2rem;
+    color: var(--shadow);
+}
+#title{
+    grid-column: 1/3;
+    padding: 1rem;
+    width: 100%;
+}
+.main #map{
+    color: #0d1501;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+}
+#status{
+    border: 2px solid black;
+    height: 100%;
+    padding: 1rem;
+}
+#status p{
+    font-size: 1.5rem;
+}
+#status h1{
+    padding: 1rem;
+    width: 100%;
+}
+
+
+#status #search{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content:space-around ;
+}
+#status #search label{
+    color: rgb(16, 98, 180);
+    font-weight: 500;
+    margin: 1rem;
+    font-size: 1.9rem;
+}
+#status #search option{    
+    color: black;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+#status #search select{    
+    color: var(--shadow);
+    font-size: 1.7rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+#node-state{
+    width: 100%;
+    flex-grow: 1 ;
+    border: 1px solid yellow ;
+}
+.filter {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+#node-state .filter h1{
+    margin-top: 1rem;
+}
+#node-state .filter h1 span{
+    color: rgba(29, 46, 190, 0.844);
+}
+#node-state .filter h2{
+    margin-top: 1rem;
+}
+#node-state .filter #hum{
+    padding: 0.5rem;
+}
+#node-state .filter #hum h2{
+    font-size: 2rem;
+    color : red;
+}
+#node-state .filter #temp{
+    padding: 0.5rem;
+}
+#node-state .filter #temp h2{
+    font-size: 2rem;
+    color : red;
+}
+#node-state .filter #fire{
+    padding: 0.5rem;
+}
+#node-state .filter #fire h2{
+    font-size: 2rem;
+    color : red;
+}

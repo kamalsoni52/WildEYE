@@ -1,0 +1,18 @@
+<h1 class="flex">Nodes Status</h1>
+<h2 class="flex">Location: {{wid}}, {{add}}</h2>
+<div id = "search" class="flex">
+    <div>
+    <label for="Nodeid">Select Node</label>
+    <select name="nodeid" id="nodeid">
+    {% for nid in NodeIds %}
+    <option value="{{nid}}">{{nid}}</option>
+    {% endfor %}
+    </select></div>
+    <div>
+    <button id ="search" class="form-btn" onclick="search()">Search</button>
+    <input type="text" name="widt" id="wid" value="{{wid}}">
+    </div>
+</div>
+<div id="node-state">   
+    <h1 class="flex">Click on Show To display status of particular nodes deploy on {{wid}}</h1>
+</div>
