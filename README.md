@@ -81,4 +81,4 @@ This project was developed by Kamal Soni and Tanishq jaiswal and Mukul Agrawal, 
   
 ## Contact
 
-Feel free to reach out to webdevKamal@gmail.com for any questions or inquiries.
+Feel free to reach out to webdevkamal@gmail.com for any questions or inquiries.
