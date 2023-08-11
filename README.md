@@ -56,37 +56,29 @@ The project's main functionalities include:
 Here are some snapshots of the web application:
 
 <p align="center">
-  <img src="./website-snapshots/home.png" alt="Snapshot 1" width="540px">
-  <img src="./website-snapshots/home.png" alt="Snapshot 2" width="25%">
-  <img src="./website-snapshots/home.png" alt="Snapshot 3" width="25%">
-  <img src="./website-snapshots/home.png" alt="Snapshot 4" width="25%">
+  <img src="./website-snapshots/home.png" alt="Snapshot 1" width="420px"> &nbsp; 
+  <img src="./website-snapshots/device-deployment.png" alt="Snapshot 2" width="420px" >  
+  <img src="./website-snapshots/realtime-deploy.png" alt="Snapshot 3" width="420px"> &nbsp;
+  <img src="./website-snapshots/image-upload.png" alt="Snapshot 4" width="420px">
+</p>
+
+
+<p align="center">
+  <img src="./website-snapshots/firestire-demo.png" alt="Snapshot 5" width="420px"> &nbsp;
+  <img src="./website-snapshots/storage-demo.png" alt="Snapshot 6" width="420px">  
+  <img src="./website-snapshots/explore-diversity.png" alt="Snapshot 7" width="420px"> &nbsp;
+  <img src="./website-snapshots/fire-alert.png" alt="Snapshot 8" width="420px">
 </p>
 
 <p align="center">
-  <img src="./website-snapshots/home.png" alt="Snapshot 5" width="25%">
-  <img src="./website-snapshots/home.png" alt="Snapshot 6" width="25%">
-  <img src="./website-snapshots/home.png" alt="Snapshot 7" width="25%">
-  <img src="./website-snapshots/home.png" alt="Snapshot 8" width="25%">
+  <em>1.HOME 2. Node and Gateway deployement section 3. Firebase realtime database 4. Image upload Section 5. Firestore 6. Storage 7. Explore page 8.Fire alert Dashboard</em>
 </p>
 
-<p align="center">
-  <em>Captions for Snapshots 1 to 8</em>
-</p>
-
-## Usage
-
-1. Clone the repository.
-2. Install the necessary dependencies by running `npm install` or `yarn install`.
-3. Set up Firebase configuration and API keys.
-4. Run the Flask server using `python app.py`.
-5. Access the web application through your browser.
 
 ## Credits
 
-This project was developed by [Your Name] and [Contributor Names], inspired by the need for efficient fire detection and wildlife monitoring using modern technologies.
+This project was developed by Kamal Soni and Tanishq jaiswal and Mukul Agrawal, inspired by the need for efficient fire detection and wildlife monitoring using modern technologies.
   
-## License
+## Contact
 
-This project is licensed under the [MIT License](link-to-license).
-
-Feel free to reach out to [Your Contact Information] for any questions or inquiries.
+Feel free to reach out to webdevKamal@gmail.com for any questions or inquiries.
