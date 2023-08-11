@@ -56,17 +56,17 @@ The project's main functionalities include:
 Here are some snapshots of the web application:
 
 <p align="center">
-  <img src="./website-snapshots/home.png" alt="Snapshot 1" width="420px"> &nbsp; 
+  <img src="./website-snapshots/home.png" alt="Snapshot 1" width="420px"> 
   <img src="./website-snapshots/device-deployment.png" alt="Snapshot 2" width="420px" >  
-  <img src="./website-snapshots/realtime-deploy.png" alt="Snapshot 3" width="420px"> &nbsp;
+  <img src="./website-snapshots/realtime-deploy.png" alt="Snapshot 3" width="420px"> 
   <img src="./website-snapshots/image-upload.png" alt="Snapshot 4" width="420px">
 </p>
 
 
 <p align="center">
-  <img src="./website-snapshots/firestire-demo.png" alt="Snapshot 5" width="420px"> &nbsp;
+  <img src="./website-snapshots/firestire-demo.png" alt="Snapshot 5" width="420px"> 
   <img src="./website-snapshots/storage-demo.png" alt="Snapshot 6" width="420px">  
-  <img src="./website-snapshots/explore-diversity.png" alt="Snapshot 7" width="420px"> &nbsp;
+  <img src="./website-snapshots/explore-diversity.png" alt="Snapshot 7" width="420px"> 
   <img src="./website-snapshots/fire-alert.png" alt="Snapshot 8" width="420px">
 </p>
 
